@@ -8,8 +8,6 @@ import java.util.Scanner;
 
 public class Main {
 
-    private Service service = new Service();
-
     public static void main(String[] args) {
         Service service = new Service();
 
@@ -29,9 +27,6 @@ public class Main {
                             break;
                         case 3:
                             getTaskByDay(service, scanner);
-                            break;
-                        case 4:
-                            inputTask(scanner);
                             break;
                         case 0:
                             break label;
@@ -96,11 +91,6 @@ public class Main {
                 throw new RuntimeException("Нет такого типа задачи!");
         }
 
-    }
-
-    private static void inputTask(Scanner scanner) {
-        System.out.print("Введите название задачи: ");
-        String taskName = scanner.next();
     }
 
     private static void removeTask(Service service, Scanner scanner) {
